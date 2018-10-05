@@ -1,6 +1,18 @@
 import axios from 'axios';
 import { PLACEHOLDER } from './types';
 
+export function sendAlert() {
+    return function(dispatch) {
+        axios.post('http://localhost:8080/api/twilio')
+            .then(res => {
+                console.log(res.data)
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
 
 export function signUp(fields) {
     return function(dispatch) {
@@ -17,10 +29,10 @@ export function signUp(fields) {
 }
 
 
-export function signIn({email, password}) {
+export function signIn(fields) {
     return function(dispatch) {
         axios.post('http://localhost:8080/api/signin', {
-            email, password
+            ...fields
         })
             .then(res => {
                 console.log(res.data);
