@@ -120,9 +120,38 @@ app.put("/api/user/:id", useBodyParser, (req, res) => {
     });
 });
 
+import { sid, authToken } from './secrets';
+
+app.post('/api/twilio', (req, res) => {
+
+    const twilio = require("twilio");
+    const client = new twilio(sid, authToken);
+    client.messages.create({
+        body: "Hey get your butt outta bed!",
+        to: "+14155370849",
+        from: "+18448988429"
+    })
+    .then((message) => {
+        console.log(message.sid)
+        res.send({
+            success: true,
+            message: message.sid
+        })
+    });
+
+
+})
+
 // const PORT = process.env.PORT || 5000;
 // console.log('listening on port: ', PORT);
 // app.listen(PORT);
+
+
+
+
+
+
+
 
 app.use(express.static(__dirname + '/dist/'));
 

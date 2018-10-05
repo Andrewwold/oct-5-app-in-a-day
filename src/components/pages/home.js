@@ -8,6 +8,7 @@ library.add(faPlusCircle);
 
 import SignIn from '../signIn/signIn';
 import SignUp from '../signUp/signUp';
+import SendReminder from '../sendReminder';
 
 import logo from '../../../static/assets/logo (1).png';
 
@@ -17,6 +18,13 @@ class Home extends Component {
     render() {
         return (
             <div className="home">
+
+                <NavBar />
+                Home Page
+                <SignIn />
+                <SignUp />
+                <SendReminder />
+
                 <div className="heading">
                     <img src={logo} width="400vw"></img>
                     <div className="buttons">
@@ -45,6 +53,7 @@ class Home extends Component {
                 </div>
 
                 
+
 
             </div>
         );
