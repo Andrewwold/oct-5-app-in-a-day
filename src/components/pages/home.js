@@ -17,12 +17,6 @@ class Home extends Component {
     render() {
         return (
             <div className="home">
-
-                <NavBar />
-                Home Page
-                <SignIn />
-                <SignUp />
-
                 <div className="heading">
                     <img src={logo} width="400vw"></img>
                     <div className="buttons">
@@ -33,6 +27,7 @@ class Home extends Component {
 
                         <div className="signup">
                             <p>Sign Up:</p>
+                            <SignUp />
                         </div>
                     </div>
                     
