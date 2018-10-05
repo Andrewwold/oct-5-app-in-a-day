@@ -9,7 +9,7 @@ class SignInForm extends Component {
       <form onSubmit={handleSubmit} className='signIn-form'>
         <Field name='email' type='email' component='input'/>
         <Field name='password' type='password' component='input'/>
-        <button>Submit</button>
+        <button className='submitButton'>Submit</button>
       </form>
     );
   }
