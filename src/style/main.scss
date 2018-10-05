@@ -1,7 +1,12 @@
 @import 'mixins';
 @import 'variables';
+
+@import 'navBar';
+@import 'pages';
+@import 'profile';
 @import './components/navBar';
 @import './components/pages';
+
 
 html {
     font-size: 62.5%; // 1rem is 10px
