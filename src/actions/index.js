@@ -2,6 +2,20 @@ import axios from 'axios';
 import { PLACEHOLDER } from './types';
 
 
+export function signUp({email, password}) {
+    return function(dispatch) {
+        axios.post('http://localhost:5000/api/signup', {
+            email, password
+        })
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
+}
+
 
 export function signIn({email, password}) {
     return function(dispatch) {
