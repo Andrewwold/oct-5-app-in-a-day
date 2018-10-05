@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchMessage, signUp } from '../actions';
+import { fetchMessage, signUp } from '../../actions';
 
 import SignUpForm from './signUpForm';
 

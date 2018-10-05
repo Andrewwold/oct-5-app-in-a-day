@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { signIn } from '../actions';
+import { signIn } from '../../actions';
 import SignInForm from './signInForm';
 
 

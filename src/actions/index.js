@@ -2,10 +2,10 @@ import axios from 'axios';
 import { PLACEHOLDER } from './types';
 
 
-export function signUp({email, password}) {
+export function signUp(fields) {
     return function(dispatch) {
-        axios.post('http://localhost:5000/api/signup', {
-            email, password
+        axios.post('http://localhost:8080/api/signup', {
+            ...fields
         })
             .then(res => {
                 console.log(res.data);
