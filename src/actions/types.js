@@ -1,2 +1,1 @@
 export const PLACEHOLDER = "PLACEHOLDER";
-export const SET_MESSAGE = 'SET_MESSAGE';

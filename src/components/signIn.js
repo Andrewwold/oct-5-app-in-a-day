@@ -5,27 +5,27 @@ import SignInForm from './signInForm';
 
 
 class SignIn extends Component {
-   
+
     onSignIn = (fields) => {
-        console.log('trying to sign in with fields: ',fields);
+        console.log('trying to sign in with fields: ', fields);
         this.props.signIn(fields);
     }
 
-  render() {
-    return (
-      <div>
-        <SignInForm onSubmit={this.onSignIn}/>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <SignInForm onSubmit={ this.onSignIn } />
+            </div>
+        );
+    }
 }
-function mapStateToProps(state) {
-    console.log(state)
+
+const mapStateToProps = (state) => {
     return {
         message: state.message.message
     }
 }
 
-SignIn = connect(mapStateToProps, {signIn})(SignIn);
+SignIn = connect(mapStateToProps, { signIn })(SignIn);
 
 export default SignIn; 
