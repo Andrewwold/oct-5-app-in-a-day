@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 import state from './reducers';
+import message from './reducers';
 
 const rootReducer = combineReducers({
   form,
-  state
+  message
 });
 
 export default rootReducer;
