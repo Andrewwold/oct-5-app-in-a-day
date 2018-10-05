@@ -26,6 +26,7 @@ class Home extends Component {
                         </div>
 
                         <div className="signup">
+                            <SignUp />
                             <p>Sign Up:</p>
                         </div>
                     </div>
