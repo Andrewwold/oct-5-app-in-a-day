@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavBar } from '../navBar/navBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import UpdateProfile from '../updateProfile.js';
 
 class Profile extends Component {
     render() {
@@ -27,6 +28,12 @@ class Profile extends Component {
                         <div id="profileContactInfo">
                             <a>Phone: 000-000-0000</a>
                             <a>Email: test@</a>
+                            {/* <form onSubmit={ handleSubmit } className='signIn-form'>
+                                <Field name='email' type='email' component='input'/>
+                                <Field name='password' type='password' component='input'/>
+                                <button className='submitButton'>Submit</button>
+                            </form> */}
+                            <UpdateProfile />
                         </div>
                     </div>
                 </div>
