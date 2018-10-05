@@ -31,6 +31,20 @@ export function signIn({email, password}) {
     }
 }
 
+export function updateProfile(fields, _id) {
+    return function(dispatch) {
+        axios.post(`http://localhost:8080/api/user/${_id}`, {
+            ...fields
+        })
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err=> {
+                console.log(err);
+            })
+    }
+}
+
 
 
 // // Example GET request
