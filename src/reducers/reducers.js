@@ -1,18 +1,17 @@
-import { PLACEHOLDER } from '../actions/types';
+
+import { SET_MESSAGE } from '../actions/types';
 
 const INITIAL_STATE = {
-    key: ""
+    message: ""
 };
 
 export default function(state = INITIAL_STATE, action) {
     switch (action.type) {
-        case PLACEHOLDER:
-            const variable = action.payload;
+        case SET_MESSAGE:
+            const { message } = action.payload;
             return {
-                ...state,
-                variable
-            };
-        default:
-            return state;
+                message
+            }
+        default: return state
     }
 }
