@@ -7,9 +7,9 @@ class SignUpForm extends Component {
         const { handleSubmit } = this.props;
         return (
             <form onSubmit={handleSubmit} className='signup-form'>
-                <Field name='email' type='email' component='input'/>
-                <Field name='password' type='password' component='input'/>
-                <button>submit</button>
+                <Field className="input" name='email' type='email' component='input'/>
+                <Field className="input" name='password' type='password' component='input'/>
+                <button className="submitButton">submit</button>
             </form>
         )
     }

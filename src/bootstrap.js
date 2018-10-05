@@ -14,6 +14,7 @@ import history from './history';
 
 import Home from './components/pages/home';
 import PageOne from './components/pages/pageOne';
+import Profile from './components/pages/profile';
 
 function main() {
     ReactDOM.render(
@@ -22,6 +23,7 @@ function main() {
                 <Switch>
                     <Route exact path="/" component={ Home } />
                     <Route exact path="/pageOne" component={ PageOne } />
+                    <Route exact path="/profile" component={ Profile } />
                 </Switch>
             </Router>
         </Provider>
