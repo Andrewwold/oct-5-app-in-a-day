@@ -1,7 +1,14 @@
-.signIn-form {
-
+.field {
+    margin-right: 2rem;
 }
 
 .submitButton {
-    
+    margin-right: 2rem;
+    padding: .5rem;
+    border-radius: 3rem;
+
+    &:hover {
+        color: white;
+        background-color: $primary-dark;
+    }
 }
