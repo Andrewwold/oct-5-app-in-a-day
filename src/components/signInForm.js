@@ -7,8 +7,8 @@ class SignInForm extends Component {
       const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit} className='signIn-form'>
-        <Field name='email' type='email' component='input'/>
-        <Field name='password' type='password' component='input'/>
+        <Field className="field" name='email' type='email' component='input'/>
+        <Field className="field" name='password' type='password' component='input'/>
         <button className='submitButton'>Submit</button>
       </form>
     );
