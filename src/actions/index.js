@@ -1,13 +1,37 @@
-// import axios from 'axios';
+import axios from 'axios';
 import { PLACEHOLDER } from './types';
 
 
-export function functionPlaceholder(argument) {
-    return ({
-        type: PLACEHOLDER,
-        payload: argument
-    });
+export function signUp(fields) {
+    return function(dispatch) {
+        axios.post('http://localhost:8080/api/signup', {
+            ...fields
+        })
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+    }
 }
+
+
+export function signIn({email, password}) {
+    return function(dispatch) {
+        axios.post('http://localhost:8080/api/signin', {
+            email, password
+        })
+            .then(res => {
+                console.log(res.data);
+            })
+            .catch(err=> {
+                console.log(err);
+            })
+    }
+}
+
+
 
 // // Example GET request
 // export function apiGetFunction() {
